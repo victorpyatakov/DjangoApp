@@ -21,9 +21,7 @@ from firstapp import views
 
 urlpatterns = [
     path("", views.index),
-
-    path('products/<int:product_id>/', views.products),
-
-    path('users/', views.users)
-
+    path('about/', views.about),
+    path('contact/', views.contact),
+    path('details/', views.details)
 ]
