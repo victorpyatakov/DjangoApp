@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>About</title>
-</head>
-<body>
-	<H1>{{ header}}</H1>
-</body>
-</html>
+{% extends "base.html" %}
+{% block title%}About{% endblock title%}
+{% block header%}О сайте{% endblock header%}
+{% block content%}
+<p>Hello!</p>
+<p>Привет!</p>
+{% endblock content%}
