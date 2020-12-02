@@ -6,6 +6,9 @@
 	<title>Hello Django!</title>
 </head>
 <body>
-	<h1>Welcome to Django!</h1>
+	<h2>{{ header }}</h2>
+	<p>Name: {{ user.name }} Age: {{user.age}}</p>
+	<p>Address: ул. {{address.0}}, д. {{address.1}} , кв. {{address.2}}</p>
+	<p>Langs: {{language.0}}, {{language.1}}</p>
 </body>
 </html>
