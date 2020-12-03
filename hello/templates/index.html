@@ -10,5 +10,14 @@
 Число отрицательное</p>
 {% endif%}
 
+<ol>
+{% for el in language%}
+<li>{{el}}</li>	
+{% empty %}
+<li>Langs array is empty</li>
+{% endfor%}
+</ol>
+
+
 
 {% endblock content %}

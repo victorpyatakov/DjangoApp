@@ -4,7 +4,8 @@ from django.shortcuts import render
 
 def index(request):
     header = "Personal Data"
-    langs = ["English", 'Spanish', 'German']
+    #langs = ["English", 'Spanish', 'German']
+    langs = []
     user = {'name': 'Victor', 'age': '25'}
     address = ('Абрикосовая', 23, 45)
 
