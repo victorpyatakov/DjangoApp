@@ -8,5 +8,5 @@ def index(request):
     user = {'name': 'Victor', 'age': '25'}
     address = ('Абрикосовая', 23, 45)
 
-    data = {"header": header, 'language': langs, 'user': user, 'address': address}
+    data = {"header": header, 'language': langs, 'user': user, 'address': address, 'n': 5}
     return render(request, "index.html", context=data)

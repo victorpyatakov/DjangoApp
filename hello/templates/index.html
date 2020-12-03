@@ -1,3 +1,14 @@
 {% extends "base.html"%}
 {% block title%}Index{% endblock title%}
 {% block header%}Главная{% endblock header%}
+{% block content %}
+
+<p>{{ n }} это - 
+{% if n > 0 %}
+Число положительное</p>
+{% else %}
+Число отрицательное</p>
+{% endif%}
+
+
+{% endblock content %}
