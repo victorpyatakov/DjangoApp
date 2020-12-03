@@ -18,6 +18,10 @@
 {% endfor%}
 </ol>
 
-
-
+{% with name="Tom" age=29 %}
+<dir>
+	<p>Name: {{ name }}</p>
+	<p>Age: {{ age }}</p>
+</dir>
+{% endwith %}
 {% endblock content %}
