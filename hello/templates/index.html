@@ -3,25 +3,12 @@
 {% block header%}Главная{% endblock header%}
 {% block content %}
 
-<p>{{ n }} это - 
-{% if n > 0 %}
-Число положительное</p>
-{% else %}
-Число отрицательное</p>
-{% endif%}
+<form method="POST">
+	{% csrf_token %}
+	<table>
+		{{ form }}
+	</table>
+	<input type="submit" value="Send">
+</form>
 
-<ol>
-{% for el in language%}
-<li>{{el}}</li>	
-{% empty %}
-<li>Langs array is empty</li>
-{% endfor%}
-</ol>
-
-{% with name="Tom" age=29 %}
-<dir>
-	<p>Name: {{ name }}</p>
-	<p>Age: {{ age }}</p>
-</dir>
-{% endwith %}
 {% endblock content %}

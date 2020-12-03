@@ -1,12 +1,14 @@
 from django.shortcuts import render
+from .forms import UserFrom
+from django.http import HttpResponse
 # Create your views here.
 
 
 def index(request):
-    header = "Personal Data"
-    langs = ["English", 'Spanish', 'German']
-    user = {'name': 'Victor', 'age': '25'}
-    address = ('Абрикосовая', 23, 45)
+    if request.method == "POST":
+        name = request.POST.get("name")
+        return HttpResponse("<h2>Hello, {0}</h2>".format(name))
+    else:
+        user_form = UserFrom()
+        return render(request, "index.html",{"form":user_form})
 
-    data = {"header": header, 'language': langs, 'user': user, 'address': address, 'n': 5}
-    return render(request, "index.html", context=data)
